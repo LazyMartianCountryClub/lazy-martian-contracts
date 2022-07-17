@@ -63,8 +63,8 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
-      rinkeby: ETHERSCAN_API_KEY ?? "",
-      mainnet: ETHERSCAN_API_KEY ?? "",
+      rinkeby: ETHERSCAN_API_KEY ?? '',
+      mainnet: ETHERSCAN_API_KEY ?? '',
     },
   },
   namedAccounts: {
