@@ -19,10 +19,6 @@ if (!INFURA_API_KEY) {
   throw new Error('Please set your INFURA_API_KEY in a .env file');
 }
 
-if (!ETHERSCAN_API_KEY) {
-  throw new Error('Please set your ETHERSCAN_API_KEY in a .env file');
-}
-
 const config: HardhatUserConfig = {
   defaultNetwork: 'hardhat',
   networks: {
@@ -67,8 +63,8 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
-      rinkeby: ETHERSCAN_API_KEY,
-      mainnet: ETHERSCAN_API_KEY,
+      rinkeby: ETHERSCAN_API_KEY ?? "",
+      mainnet: ETHERSCAN_API_KEY ?? "",
     },
   },
   namedAccounts: {
